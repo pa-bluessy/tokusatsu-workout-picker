@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b1220">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>筋トレ用 ヒーローソング えらび</title>
+<style>
+:root{--bg:#0a0f1a;--bg2:#0f1828;--card:#131e31;--line:#24324a;--line2:#2f4060;--text:#c9d3e2;--sub:#8a98ae;--blue:#3d5a85;--gold:#c9a46a;}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;font-size:16px;line-height:1.55;-webkit-text-size-adjust:100%}
+body{padding-bottom:env(safe-area-inset-bottom)}
+.wrap{max-width:720px;margin:0 auto;padding:0 12px 48px}
+header{padding:18px 0 6px}
+h1{font-size:1.25rem;margin:0 0 4px;font-weight:700;color:#dbe3ef}
+.lead{color:var(--sub);font-size:.9rem;margin:0}
+.bar{position:sticky;top:0;z-index:20;background:rgba(10,15,26,.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);margin:0 -12px;padding:8px 12px calc(8px)}
+.barrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.total{font-size:.85rem;color:var(--sub);flex:1;min-width:120px}
+.total b{color:var(--gold);font-weight:700}
+.filters{display:flex;gap:6px;margin-top:8px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.filters button{flex:1 0 auto}
+button{font:inherit;color:var(--text);background:var(--bg2);border:1px solid var(--line2);border-radius:10px;padding:8px 12px;min-height:40px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+button:active{transform:scale(.98)}
+.filters button[aria-pressed="true"]{border-color:var(--gold);color:var(--gold)}
+.btn-gold{border-color:var(--gold);color:var(--gold);font-weight:700}
+.btn-copy{font-size:1.15rem;padding:12px 18px;min-height:52px;width:100%;border:2px solid var(--gold);color:var(--bg);background:var(--gold);font-weight:700;border-radius:12px}
+.btn-small{font-size:.85rem;min-height:36px;padding:6px 10px}
+.panel{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:12px;margin:12px 0}
+.panel h2{font-size:1rem;margin:0 0 8px}
+textarea#out{width:100%;min-height:170px;max-height:45vh;resize:vertical;background:#070b13;color:var(--text);border:1px solid var(--line2);border-radius:10px;padding:10px;font:15px/1.6 ui-monospace,"SF Mono",Menlo,monospace,"Hiragino Sans";white-space:pre}
+.row2{display:flex;gap:8px;margin-top:10px;align-items:stretch}
+.row2 .btn-copy{flex:1}
+.msg{min-height:1.4em;font-size:.88rem;color:var(--gold);margin-top:6px}
+section.series{margin-top:22px}
+.shead{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:6px}
+.shead h2{font-size:1.1rem;margin:0;color:#dbe3ef}
+.count{font-size:.82rem;color:var(--sub)}
+.count b{color:var(--gold)}
+.note{font-size:.85rem;color:var(--sub);margin:8px 0 10px}
+.sub{font-size:.95rem;margin:18px 0 4px;color:#b9c5d8;border-left:3px solid var(--blue);padding-left:8px}
+.list{display:grid;gap:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;transition:border-color .15s,opacity .15s}
+.card .no{font-size:.75rem;color:var(--sub)}
+.card .title{font-weight:700;font-size:1rem;word-break:break-word;color:#dbe3ef}
+.card .yr{font-size:.85rem;color:var(--sub)}
+.tags{display:flex;gap:4px;flex-wrap:wrap;margin-top:4px}
+.tag{font-size:.7rem;border:1px solid var(--line2);color:var(--sub);background:transparent;border-radius:999px;padding:1px 8px}
+.tag.on{border-color:var(--gold);color:var(--gold)}
+.acts{display:flex;flex-direction:column;gap:6px}
+.acts button{min-width:72px;min-height:38px;padding:6px 10px;font-size:.9rem}
+.card.yes{border-color:var(--gold);box-shadow:inset 4px 0 0 var(--gold)}
+.card.yes .b-yes{border-color:var(--gold);background:var(--gold);color:var(--bg);font-weight:700}
+.card.no-c{opacity:.55}
+.card.no-c .title{text-decoration:line-through;text-decoration-color:var(--sub)}
+.card.no-c .b-no{border-color:var(--sub);background:#25324a;color:#dbe3ef;font-weight:700}
+.state{font-size:.75rem;margin-top:4px}
+.card.yes .state{color:var(--gold)}
+.card.no-c .state{color:var(--sub)}
+.hide{display:none!important}
+.empty{color:var(--sub);font-size:.88rem;padding:6px 2px}
+footer{color:var(--sub);font-size:.78rem;margin-top:32px;border-top:1px solid var(--line);padding-top:10px}
+a{color:var(--gold)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>筋トレ用 ヒーローソング えらび</h1>
+<p class="lead">トレーニングで聴きたい曲の番組を「採用」、いらないものを「却下」。えらんだものは下のリストに自動でまとまるので、「コピー」でそのまま使えます。</p>
+</header>
+
+<div class="bar" id="bar">
+  <div class="barrow">
+    <div class="total" id="total"></div>
+    <button class="btn-gold btn-small" id="copyTop" type="button">コピー</button>
+    <button class="btn-small" id="jump" type="button">リストを見る</button>
+  </div>
+  <div class="filters" role="group" aria-label="しぼりこみ">
+    <button type="button" data-f="all" aria-pressed="true">すべて</button>
+    <button type="button" data-f="yes" aria-pressed="false">採用</button>
+    <button type="button" data-f="no" aria-pressed="false">却下</button>
+    <button type="button" data-f="none" aria-pressed="false">未選択</button>
+  </div>
+</div>
+
+<div class="panel" id="outPanel">
+  <h2>採用リスト（コピー用）</h2>
+  <textarea id="out" readonly aria-label="採用した番組のリスト"></textarea>
+  <div class="row2">
+    <button class="btn-copy" id="copy" type="button">コピー</button>
+    <button id="reset" type="button">リセット</button>
+  </div>
+  <div class="msg" id="msg" aria-live="polite"></div>
+</div>
+
+<main id="main"></main>
+
+<footer>
+  作品名と放送年は日本語版ウィキペディアの一覧ページ（仮面ライダーシリーズ／スーパー戦隊シリーズ／メタルヒーローシリーズ／PROJECT R.E.D.）で確かめました（2026年10月時点）。えらんだ結果はこの端末のブラウザの中だけに保存されます。
+</footer>
+</div>
+
+<script>
+(function(){
+var DATA=[{"key": "kr", "name": "仮面ライダーシリーズ", "note": "テレビで毎週やったシリーズだけ。特番（例：10号誕生!仮面ライダー全員集合!!）やネット配信の作品は入れていません。", "items": [{"id": "kr01", "n": 1, "t": "仮面ライダー", "y": "1971–1973", "tags": ["昭和"]}, {"id": "kr02", "n": 2, "t": "仮面ライダーV3", "y": "1973–1974", "tags": ["昭和"]}, {"id": "kr03", "n": 3, "t": "仮面ライダーX", "y": "1974", "tags": ["昭和"]}, {"id": "kr04", "n": 4, "t": "仮面ライダーアマゾン", "y": "1974–1975", "tags": ["昭和"]}, {"id": "kr05", "n": 5, "t": "仮面ライダーストロンガー", "y": "1975", "tags": ["昭和"]}, {"id": "kr06", "n": 6, "t": "仮面ライダー（スカイライダー）", "y": "1979–1980", "tags": ["昭和"]}, {"id": "kr07", "n": 7, "t": "仮面ライダースーパー1", "y": "1980–1981", "tags": ["昭和"]}, {"id": "kr08", "n": 8, "t": "仮面ライダーBLACK", "y": "1987–1988", "tags": ["昭和"]}, {"id": "kr09", "n": 9, "t": "仮面ライダーBLACK RX", "y": "1988–1989", "tags": ["昭和"]}, {"id": "kr10", "n": 10, "t": "仮面ライダークウガ", "y": "2000–2001", "tags": ["平成"]}, {"id": "kr11", "n": 11, "t": "仮面ライダーアギト", "y": "2001–2002", "tags": ["平成"]}, {"id": "kr12", "n": 12, "t": "仮面ライダー龍騎", "y": "2002–2003", "tags": ["平成"]}, {"id": "kr13", "n": 13, "t": "仮面ライダー555", "y": "2003–2004", "tags": ["平成"]}, {"id": "kr14", "n": 14, "t": "仮面ライダー剣", "y": "2004–2005", "tags": ["平成"]}, {"id": "kr15", "n": 15, "t": "仮面ライダー響鬼", "y": "2005–2006", "tags": ["平成"]}, {"id": "kr16", "n": 16, "t": "仮面ライダーカブト", "y": "2006–2007", "tags": ["平成"]}, {"id": "kr17", "n": 17, "t": "仮面ライダー電王", "y": "2007–2008", "tags": ["平成"]}, {"id": "kr18", "n": 18, "t": "仮面ライダーキバ", "y": "2008–2009", "tags": ["平成"]}, {"id": "kr19", "n": 19, "t": "仮面ライダーディケイド", "y": "2009", "tags": ["平成"]}, {"id": "kr20", "n": 20, "t": "仮面ライダーW", "y": "2009–2010", "tags": ["平成"]}, {"id": "kr21", "n": 21, "t": "仮面ライダーオーズ/OOO", "y": "2010–2011", "tags": ["平成"]}, {"id": "kr22", "n": 22, "t": "仮面ライダーフォーゼ", "y": "2011–2012", "tags": ["平成"]}, {"id": "kr23", "n": 23, "t": "仮面ライダーウィザード", "y": "2012–2013", "tags": ["平成"]}, {"id": "kr24", "n": 24, "t": "仮面ライダー鎧武/ガイム", "y": "2013–2014", "tags": ["平成"]}, {"id": "kr25", "n": 25, "t": "仮面ライダードライブ", "y": "2014–2015", "tags": ["平成"]}, {"id": "kr26", "n": 26, "t": "仮面ライダーゴースト", "y": "2015–2016", "tags": ["平成"]}, {"id": "kr27", "n": 27, "t": "仮面ライダーエグゼイド", "y": "2016–2017", "tags": ["平成"]}, {"id": "kr28", "n": 28, "t": "仮面ライダービルド", "y": "2017–2018", "tags": ["平成"]}, {"id": "kr29", "n": 29, "t": "仮面ライダージオウ", "y": "2018–2019", "tags": ["平成"]}, {"id": "kr30", "n": 30, "t": "仮面ライダーゼロワン", "y": "2019–2020", "tags": ["令和"]}, {"id": "kr31", "n": 31, "t": "仮面ライダーセイバー", "y": "2020–2021", "tags": ["令和"]}, {"id": "kr32", "n": 32, "t": "仮面ライダーリバイス", "y": "2021–2022", "tags": ["令和"]}, {"id": "kr33", "n": 33, "t": "仮面ライダーギーツ", "y": "2022–2023", "tags": ["令和"]}, {"id": "kr34", "n": 34, "t": "仮面ライダーガッチャード", "y": "2023–2024", "tags": ["令和"]}, {"id": "kr35", "n": 35, "t": "仮面ライダーガヴ", "y": "2024–2025", "tags": ["令和"]}, {"id": "kr36", "n": 36, "t": "仮面ライダーゼッツ", "y": "2025–2026", "tags": ["令和"]}, {"id": "kr37", "n": 37, "t": "仮面ライダーマイス", "y": "2026–", "tags": ["令和", "放送中"]}]}, {"key": "ss", "name": "スーパー戦隊シリーズ", "note": "スーパー戦隊はゴジュウジャー（2025–2026）でいったん終わりました。そのあとの同じ時間の番組は「PROJECT R.E.D.」という新しいシリーズで、戦隊ではありません。下に分けてのせています。", "items": [{"id": "ss01", "n": 1, "t": "秘密戦隊ゴレンジャー", "y": "1975–1977", "tags": []}, {"id": "ss02", "n": 2, "t": "ジャッカー電撃隊", "y": "1977", "tags": []}, {"id": "ss03", "n": 3, "t": "バトルフィーバーJ", "y": "1979–1980", "tags": []}, {"id": "ss04", "n": 4, "t": "電子戦隊デンジマン", "y": "1980–1981", "tags": []}, {"id": "ss05", "n": 5, "t": "太陽戦隊サンバルカン", "y": "1981–1982", "tags": []}, {"id": "ss06", "n": 6, "t": "大戦隊ゴーグルファイブ", "y": "1982–1983", "tags": []}, {"id": "ss07", "n": 7, "t": "科学戦隊ダイナマン", "y": "1983–1984", "tags": []}, {"id": "ss08", "n": 8, "t": "超電子バイオマン", "y": "1984–1985", "tags": []}, {"id": "ss09", "n": 9, "t": "電撃戦隊チェンジマン", "y": "1985–1986", "tags": []}, {"id": "ss10", "n": 10, "t": "超新星フラッシュマン", "y": "1986–1987", "tags": []}, {"id": "ss11", "n": 11, "t": "光戦隊マスクマン", "y": "1987–1988", "tags": []}, {"id": "ss12", "n": 12, "t": "超獣戦隊ライブマン", "y": "1988–1989", "tags": []}, {"id": "ss13", "n": 13, "t": "高速戦隊ターボレンジャー", "y": "1989–1990", "tags": []}, {"id": "ss14", "n": 14, "t": "地球戦隊ファイブマン", "y": "1990–1991", "tags": []}, {"id": "ss15", "n": 15, "t": "鳥人戦隊ジェットマン", "y": "1991–1992", "tags": []}, {"id": "ss16", "n": 16, "t": "恐竜戦隊ジュウレンジャー", "y": "1992–1993", "tags": []}, {"id": "ss17", "n": 17, "t": "五星戦隊ダイレンジャー", "y": "1993–1994", "tags": []}, {"id": "ss18", "n": 18, "t": "忍者戦隊カクレンジャー", "y": "1994–1995", "tags": []}, {"id": "ss19", "n": 19, "t": "超力戦隊オーレンジャー", "y": "1995–1996", "tags": []}, {"id": "ss20", "n": 20, "t": "激走戦隊カーレンジャー", "y": "1996–1997", "tags": []}, {"id": "ss21", "n": 21, "t": "電磁戦隊メガレンジャー", "y": "1997–1998", "tags": []}, {"id": "ss22", "n": 22, "t": "星獣戦隊ギンガマン", "y": "1998–1999", "tags": []}, {"id": "ss23", "n": 23, "t": "救急戦隊ゴーゴーファイブ", "y": "1999–2000", "tags": []}, {"id": "ss24", "n": 24, "t": "未来戦隊タイムレンジャー", "y": "2000–2001", "tags": []}, {"id": "ss25", "n": 25, "t": "百獣戦隊ガオレンジャー", "y": "2001–2002", "tags": []}, {"id": "ss26", "n": 26, "t": "忍風戦隊ハリケンジャー", "y": "2002–2003", "tags": []}, {"id": "ss27", "n": 27, "t": "爆竜戦隊アバレンジャー", "y": "2003–2004", "tags": []}, {"id": "ss28", "n": 28, "t": "特捜戦隊デカレンジャー", "y": "2004–2005", "tags": []}, {"id": "ss29", "n": 29, "t": "魔法戦隊マジレンジャー", "y": "2005–2006", "tags": []}, {"id": "ss30", "n": 30, "t": "轟轟戦隊ボウケンジャー", "y": "2006–2007", "tags": []}, {"id": "ss31", "n": 31, "t": "獣拳戦隊ゲキレンジャー", "y": "2007–2008", "tags": []}, {"id": "ss32", "n": 32, "t": "炎神戦隊ゴーオンジャー", "y": "2008–2009", "tags": []}, {"id": "ss33", "n": 33, "t": "侍戦隊シンケンジャー", "y": "2009–2010", "tags": []}, {"id": "ss34", "n": 34, "t": "天装戦隊ゴセイジャー", "y": "2010–2011", "tags": []}, {"id": "ss35", "n": 35, "t": "海賊戦隊ゴーカイジャー", "y": "2011–2012", "tags": []}, {"id": "ss36", "n": 36, "t": "特命戦隊ゴーバスターズ", "y": "2012–2013", "tags": []}, {"id": "ss37", "n": 37, "t": "獣電戦隊キョウリュウジャー", "y": "2013–2014", "tags": []}, {"id": "ss38", "n": 38, "t": "烈車戦隊トッキュウジャー", "y": "2014–2015", "tags": []}, {"id": "ss39", "n": 39, "t": "手裏剣戦隊ニンニンジャー", "y": "2015–2016", "tags": []}, {"id": "ss40", "n": 40, "t": "動物戦隊ジュウオウジャー", "y": "2016–2017", "tags": []}, {"id": "ss41", "n": 41, "t": "宇宙戦隊キュウレンジャー", "y": "2017–2018", "tags": []}, {"id": "ss42", "n": 42, "t": "快盗戦隊ルパンレンジャーVS警察戦隊パトレンジャー", "y": "2018–2019", "tags": []}, {"id": "ss43", "n": 43, "t": "騎士竜戦隊リュウソウジャー", "y": "2019–2020", "tags": []}, {"id": "ss44", "n": 44, "t": "魔進戦隊キラメイジャー", "y": "2020–2021", "tags": []}, {"id": "ss45", "n": 45, "t": "機界戦隊ゼンカイジャー", "y": "2021–2022", "tags": []}, {"id": "ss46", "n": 46, "t": "暴太郎戦隊ドンブラザーズ", "y": "2022–2023", "tags": []}, {"id": "ss47", "n": 47, "t": "王様戦隊キングオージャー", "y": "2023–2024", "tags": []}, {"id": "ss48", "n": 48, "t": "爆上戦隊ブンブンジャー", "y": "2024–2025", "tags": []}, {"id": "ss49", "n": 49, "t": "ナンバーワン戦隊ゴジュウジャー", "y": "2025–2026", "tags": ["スーパー戦隊 最終作"]}], "extra": {"title": "そのあとの番組（PROJECT R.E.D.／スーパー戦隊ではない）", "items": [{"id": "red01", "n": "—", "t": "超宇宙刑事ギャバン インフィニティ", "y": "2026", "tags": ["PROJECT R.E.D.", "戦隊ではない"]}, {"id": "red02", "n": "—", "t": "角醒ハンター オメガホーン", "y": "2026–", "tags": ["PROJECT R.E.D.", "戦隊ではない", "放送中"]}]}}, {"key": "mh", "name": "メタルヒーローシリーズ", "note": "『宇宙刑事ギャバン THE MOVIE』などの映画・Vシネマは入れていません。※ビーファイターカブトは1996–1997年の放送です。1999年に終わったのは最後の『テツワン探偵ロボタック』。公式では17作品ですが、カブタックとロボタックを入れない資料もあります。", "items": [{"id": "mh01", "n": 1, "t": "宇宙刑事ギャバン", "y": "1982–1983", "tags": []}, {"id": "mh02", "n": 2, "t": "宇宙刑事シャリバン", "y": "1983–1984", "tags": []}, {"id": "mh03", "n": 3, "t": "宇宙刑事シャイダー", "y": "1984–1985", "tags": []}, {"id": "mh04", "n": 4, "t": "巨獣特捜ジャスピオン", "y": "1985–1986", "tags": []}, {"id": "mh05", "n": 5, "t": "時空戦士スピルバン", "y": "1986–1987", "tags": []}, {"id": "mh06", "n": 6, "t": "超人機メタルダー", "y": "1987–1988", "tags": []}, {"id": "mh07", "n": 7, "t": "世界忍者戦ジライヤ", "y": "1988–1989", "tags": []}, {"id": "mh08", "n": 8, "t": "機動刑事ジバン", "y": "1989–1990", "tags": []}, {"id": "mh09", "n": 9, "t": "特警ウインスペクター", "y": "1990–1991", "tags": []}, {"id": "mh10", "n": 10, "t": "特救指令ソルブレイン", "y": "1991–1992", "tags": []}, {"id": "mh11", "n": 11, "t": "特捜エクシードラフト", "y": "1992–1993", "tags": []}, {"id": "mh12", "n": 12, "t": "特捜ロボ ジャンパーソン", "y": "1993–1994", "tags": []}, {"id": "mh13", "n": 13, "t": "ブルースワット", "y": "1994–1995", "tags": []}, {"id": "mh14", "n": 14, "t": "重甲ビーファイター", "y": "1995–1996", "tags": []}, {"id": "mh15", "n": 15, "t": "ビーファイターカブト", "y": "1996–1997", "tags": []}, {"id": "mh16", "n": 16, "t": "ビーロボカブタック", "y": "1997–1998", "tags": ["資料によっては入らない"]}, {"id": "mh17", "n": 17, "t": "テツワン探偵ロボタック", "y": "1998–1999", "tags": ["資料によっては入らない"]}]}];
+var KEY="tokusatsu-workout-picker-v1";
+var st={};try{st=JSON.parse(localStorage.getItem(KEY)||"{}")||{}}catch(e){st={}}
+var filter="all";
+function save(){try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}}
+function el(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e}
+var main=document.getElementById("main");
+var cards={};
+function allItems(s){return s.items.concat(s.extra?s.extra.items:[])}
+function card(it){
+  var c=el("div","card");c.dataset.id=it.id;
+  var l=el("div");
+  if(it.n!=="—")l.appendChild(el("div","no","第"+it.n+"作"));
+  l.appendChild(el("div","title",it.t));
+  l.appendChild(el("div","yr",(/–$/.test(it.y)?it.y.replace(/–$/,"")+"年〜（放送中）":it.y+"年")));
+  if(it.tags.length){var tg=el("div","tags");it.tags.forEach(function(t){tg.appendChild(el("span","tag"+(t==="放送中"?" on":""),t))});l.appendChild(tg)}
+  l.appendChild(el("div","state"));
+  var a=el("div","acts");
+  var by=el("button","b-yes","採用");by.type="button";
+  var bn=el("button","b-no","却下");bn.type="button";
+  by.onclick=function(){toggle(it.id,"yes")};bn.onclick=function(){toggle(it.id,"no")};
+  a.appendChild(by);a.appendChild(bn);
+  c.appendChild(l);c.appendChild(a);cards[it.id]={el:c,by:by,bn:bn};
+  return c;
+}
+DATA.forEach(function(s){
+  var sec=el("section","series");sec.id="sec-"+s.key;
+  var h=el("div","shead");h.appendChild(el("h2",null,s.name));
+  var cnt=el("div","count");cnt.id="cnt-"+s.key;h.appendChild(cnt);sec.appendChild(h);
+  sec.appendChild(el("p","note",s.note));
+  var list=el("div","list");s.items.forEach(function(it){list.appendChild(card(it))});sec.appendChild(list);
+  sec.appendChild(el("div","empty hide",""));
+  if(s.extra){sec.appendChild(el("h3","sub",s.extra.title));var l2=el("div","list");s.extra.items.forEach(function(it){l2.appendChild(card(it))});sec.appendChild(l2)}
+  main.appendChild(sec);
+});
+function toggle(id,v){if(st[id]===v)delete st[id];else st[id]=v;save();render()}
+function text(){
+  var out=[];
+  DATA.forEach(function(s){
+    var y=s.items.filter(function(i){return st[i.id]==="yes"}).map(function(i){return i.t+"（"+i.y+"）"});
+    var y2=s.extra?s.extra.items.filter(function(i){return st[i.id]==="yes"}).map(function(i){return i.t+"（"+i.y+"）※PROJECT R.E.D."}):[];
+    var all=y.concat(y2);
+    if(all.length){if(out.length)out.push("");out.push("【"+s.name+"】");out=out.concat(all)}
+  });
+  return out.join("\n");
+}
+function render(){
+  var ty=0,tn=0,tt=0;
+  DATA.forEach(function(s){
+    var items=allItems(s),y=0,n=0,shown=0;
+    items.forEach(function(it){
+      var v=st[it.id],c=cards[it.id];
+      c.el.classList.toggle("yes",v==="yes");c.el.classList.toggle("no-c",v==="no");
+      c.by.setAttribute("aria-pressed",v==="yes");c.bn.setAttribute("aria-pressed",v==="no");
+      c.el.querySelector(".state").textContent=v==="yes"?"✓ 採用":v==="no"?"× 却下":"";
+      var show=filter==="all"||(filter==="yes"&&v==="yes")||(filter==="no"&&v==="no")||(filter==="none"&&!v);
+      c.el.classList.toggle("hide",!show);if(show)shown++;
+      if(v==="yes")y++;else if(v==="no")n++;
+    });
+    ty+=y;tn+=n;tt+=items.length;
+    document.getElementById("cnt-"+s.key).innerHTML="採用 <b>"+y+"</b> ／ 却下 "+n+" ／ 未選択 "+(items.length-y-n)+" ／ 全"+items.length;
+    var em=document.querySelector("#sec-"+s.key+" .empty");em.textContent=shown?"":"この条件に合う番組はありません。";em.classList.toggle("hide",!!shown);
+    document.querySelectorAll("#sec-"+s.key+" .sub").forEach(function(h){var l=h.nextElementSibling;var any=[].some.call(l.children,function(c){return !c.classList.contains("hide")});h.classList.toggle("hide",!any)});
+  });
+  document.getElementById("total").innerHTML="採用 <b>"+ty+"</b> ／ 却下 "+tn+" ／ 全"+tt;
+  var t=text();document.getElementById("out").value=t||"（まだ採用した番組はありません）";
+}
+var msg=document.getElementById("msg");var mt;
+function say(s){msg.textContent=s;clearTimeout(mt);mt=setTimeout(function(){msg.textContent=""},2500)}
+function fallback(t){
+  var ta=document.createElement("textarea");ta.value=t;ta.setAttribute("readonly","");ta.style.position="fixed";ta.style.top="0";ta.style.left="0";ta.style.opacity="0";ta.style.fontSize="16px";
+  document.body.appendChild(ta);ta.focus();ta.select();ta.setSelectionRange(0,t.length);
+  var ok=false;try{ok=document.execCommand("copy")}catch(e){}
+  document.body.removeChild(ta);return ok;
+}
+function copy(){
+  var t=text();if(!t){say("まだ採用した番組がありません。");return}
+  function done(){say("コピーしました！（"+t.split("\n").filter(function(l){return l&&l[0]!=="【"}).length+"件）")}
+  function fb(){if(fallback(t))done();else{var o=document.getElementById("out");o.focus();o.select();say("自動でコピーできませんでした。リストを長押ししてコピーしてね。")}}
+  if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(done,fb)}else fb();
+}
+document.getElementById("copy").onclick=copy;
+document.getElementById("copyTop").onclick=copy;
+document.getElementById("jump").onclick=function(){document.getElementById("outPanel").scrollIntoView({behavior:"smooth",block:"start"})};
+document.getElementById("reset").onclick=function(){
+  if(confirm("採用・却下をぜんぶ消して、最初の状態にもどしますか？")){st={};save();render();say("リセットしました。")}
+};
+document.querySelectorAll(".filters button").forEach(function(b){b.onclick=function(){filter=b.dataset.f;document.querySelectorAll(".filters button").forEach(function(x){x.setAttribute("aria-pressed",x===b)});render()}});
+render();
+})();
+</script>
+</body>
+</html>
